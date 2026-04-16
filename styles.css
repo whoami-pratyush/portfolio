@@ -1,0 +1,223 @@
+:root {
+    --text-color-normal: #9aa5ce;
+    --text-color-highlight: #c0caf5;
+    --text-color-tags: #f7768e;
+    --link-color: #73daca;
+    --background-color: #1a1b26;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: dotted;
+}
+
+a:hover {
+    color: var(--text-color-tags);
+    transition: 0.2s;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+nav .left a {
+    color: var(--text-color-normal);
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+nav .left a:hover {
+    color: var(--text-color-tags);
+    transition: 0.2s;
+}
+
+nav .right a {
+    color: var(--text-color-normal);
+    margin: 0px 10px;
+}
+
+nav .right a:hover {
+    color: var(--text-color-tags);
+    transition: 0.2s;
+}
+
+ul {
+    list-style-position: inside;
+    color: var(--text-color-normal);
+
+}
+
+* ::marker {
+    color: var(--text-color-tags);
+}
+
+
+
+.normal {
+    color: var(--text-color-normal);
+    display: inline;
+}
+
+.highlight {
+    color: var(--text-color-highlight);
+    display: inline;
+}
+
+
+
+/* Hero Section */
+.HeroSection {
+
+    padding: 10px 100px;
+
+
+
+}
+
+.title .normal,
+.title .highlight {
+    font-size: 22px;
+    /* or 5rem, 6rem, etc. – adjust as needed */
+}
+
+.secBorder {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0 50px;
+    align-items: start;
+    align-content: center;
+    border: 2px solid var(--text-color-normal);
+    border-radius: 20px;
+    box-shadow: 0px 8px 10px 0px;
+}
+
+.HeroSection p {
+    color: var(--text-color-normal);
+
+    margin: 10px 0px;
+}
+
+.card {
+
+    padding: 20px;
+    margin: 30px 30px;
+    border: 2px dotted var(--text-color-highlight);
+    border-radius: 20px;
+    transition: 0.2s;
+    box-sizing: content-box;
+}
+
+.card:hover {
+
+    box-shadow: 0px 0px 30px 0px;
+    transition: 0.2s;
+}
+
+.card .title {
+    font-size: 22px;
+    padding: 10px;
+}
+
+.card .cardContent {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 50px;
+    padding: 10px;
+
+}
+
+.card .cardContent .right img {
+    border-radius: 20px;
+    border: 2px solid var(--text-color-tags);
+    height: auto;
+    width: 300px;
+}
+
+.Resume .card {
+    border: none;
+}
+
+.Resume .card:hover {
+    box-shadow: none;
+}
+
+.Resume .card .cardContent {
+    gap: 50px;
+}
+
+@media (max-width: 1200px) {
+    .secBorder {
+        padding: 10px;
+    }
+
+    .card .cardContent {
+        flex-direction: column;
+    }
+
+}
+
+
+@media(max-width: 910px) {
+    .card .cardContent .right img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 646px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    nav .right a {
+        font-size: 22px;
+        margin: 0 2px;
+    }
+
+    nav .right a span {
+        display: none;
+    }
+
+    .HeroSection {
+        padding: 10px 25px;
+    }
+
+    .card .cardContent {
+        flex-direction: column;
+        padding: 2px;
+    }
+
+    .card .cardContent .right img {
+        width: 100%;
+    }
+    .card{
+        padding: 2px;
+        margin: 5px 15px;
+    }
+    
+
+
+}
